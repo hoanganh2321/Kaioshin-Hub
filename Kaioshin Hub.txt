@@ -2512,79 +2512,85 @@ local W = Window:MakeTab({
 })
 
 local M = Window:MakeTab({
-    Name = "Chính",
+    Name = "Main",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local ST = Window:MakeTab({
-    Name = "Cài đặt",
+    Name = "Setting",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
-    Name = "Vật phẩm",
+    Name = "Item",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local S = Window:MakeTab({
-    Name = "chri số",
+    Name = "Stat",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local E = Window:MakeTab({
-    Name = "định vị",
+    Name = "ESP",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local RA = Window:MakeTab({
-    Name = "tập kích",
+    Name = "Raid",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
-    Name = "người chơi",
+    Name = "Player",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local Wld = Window:MakeTab({
-    Name = "di chuyển",
+    Name = "Teleport",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
-    Name = "Thông tin server",
+    Name = "Server Information",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local D = Window:MakeTab({
-    Name = "Trái Ác quỷ",
+    Name = "Devil Fruits",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local R = Window:MakeTab({
-    Name = "Tộc V4",
+    Name = "Race V4",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
-    Name = "cửa hàng",
+    Name = "Shop",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
-    Name = "khác",
+    Name = "Orther",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local C = Window:MakeTab({
+    Name = "Wait Update ",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2795,7 +2801,7 @@ M:AddParagraph("Select Weapon","Please Select Weapon")
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
 M:AddDropdown({
-    Name = "Chọn vũ khí",
+    Name = "Choose a weapon",
     Default = "",
     Options = WeaponList,
     Flag = "Select Weapon",
@@ -2939,7 +2945,7 @@ end
     
     
     M:AddButton({
-        Name = "nhập hết code",
+        Name = "Complete code entry",
         Callback = function()
             function RedeemCode(value)
                 game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(value)
@@ -2951,13 +2957,13 @@ end
     })
 
     local Section = M:AddSection({
-        Name = "Tự động Farm Level"
+        Name = "Auto Farm Lever"
     })
 
 M:AddParagraph("Main Farm","")
 
 ToggleFarm = M:AddToggle({
-    Name = "Cày cấp",
+    Name = "Farm Lever",
     Default = false,
     Flag = "LevelFarm",
     Save = true,
@@ -2991,7 +2997,7 @@ end)
 
 
 M:AddToggle({
-    Name = "đến đảo kitsune",
+    Name = "Teleport to the island kitsune",
     Default = false,
     Flag = "KitsuneIslandTween",
     Save = true,
@@ -3023,7 +3029,7 @@ spawn(function()
 end)
 
 M:AddToggle({
-    Name = "nhặt lửa",
+    Name = "Auto Collect Azure Amber",
     Default = false,
     Flag = "AutoAzureAmber",
     Save = true,
@@ -3047,7 +3053,7 @@ end)
 
 
 M:AddToggle({
-    Name = "định vị đảo kitsune",
+    Name = "Esp Kitsune ",
     Default = false,
     Flag = "EspKitsune",
     Save = true,
@@ -3098,7 +3104,7 @@ end
 M:AddParagraph("Sea Event","")
 
 M:AddToggle({
-    Name = "Đánh TerrorShark",
+    Name = "Attack TerrorShark",
     Default = false,
     Flag = "Terrorshark",
     Save = true,
@@ -3109,7 +3115,7 @@ M:AddToggle({
 })
 
 M:AddToggle({
-    Name = "Đánh Shark",
+    Name = "Attack Shark",
     Default = false,
     Flag = "Shark",
     Save = true,
@@ -3157,7 +3163,7 @@ spawn(function()
 end)
 
 M:AddToggle({
-    Name = "Đánh Piranha",
+    Name = "Attack Fish",
     Default = false,
     Flag = "Piranha",
     Save = true,
@@ -3169,7 +3175,7 @@ M:AddToggle({
 
 
 M:AddToggle({
-    Name = "Đánh Fish Crew",
+    Name = "Attack Fish Crew",
     Default = false,
     Flag = "FishCrew",
     Save = true,
@@ -3298,7 +3304,7 @@ local Section = M:AddSection({
 M:AddParagraph("Mastery Menu","")
 
 M:AddToggle({
-    Name = "Cày Thông thạo Trái",
+    Name = "Auto Farm Mastery DF",
     Default = false,
     Flag = "Mastery",
     Save = true,
@@ -3312,7 +3318,7 @@ M:AddToggle({
 })
 
 M:AddToggle({
-    Name = "Cày Thông thạo Súng",
+    Name = "Auto Farm Mastery Gun",
     Default = false,
     Flag = "Gun Mastery",
     Save = true,
@@ -3323,7 +3329,7 @@ M:AddToggle({
 })
 
     M:AddSlider({
-        Name = "Máu",
+        Name = "Hp",
         Min = 0,
         Max = 100,
         Default = 25,
@@ -3398,7 +3404,7 @@ M:AddToggle({
     })
 
 M:AddToggle({
-    Name = "gom quái",
+    Name = "Bring Mobs",
     Default = true,
     Flag = "Bring Mobs",
     Save = false,
@@ -3440,8 +3446,8 @@ local Section = M:AddSection({
 })
 
 M:AddToggle({
-    Name = "Đánh Nhanh",
-    Default = true,
+    Name = "Fast Attack",
+    Default = false,
     Flag = "FastAttack",
     Save = false,
     Callback = function(Value)
@@ -3481,14 +3487,14 @@ spawn(function()
     end)
 end)
 
-    _G.FastAttackDelay = 0.2
+    _G.FastAttackDelay = 1
            
 local Section = M:AddSection({
     Name = "Bypass Teleport"
 })
 
 M:AddToggle({
-    Name = "Di Chuyển = Reset",
+    Name = "Teleport = Reset",
     Default = false,
     Flag = "Bypass TP",
     Save = true,
@@ -3504,7 +3510,7 @@ local Section = M:AddSection({
 
 PosY = 30
 M:AddSlider({
-    Name = "Khoảng Cách",
+    Name = "ESP",
     Min = 0,
     Max = 65,
     Default = PosY,
@@ -3524,7 +3530,7 @@ local Section = M:AddSection({
 })
 
 Farmfasttoggle = M:AddToggle({
-    Name = "Cày Nhanh",
+    Name = "Fast Farm",
     Default = false,
     Flag = "Farm Fast",
     Save = true,
@@ -3629,9 +3635,9 @@ local Section = M:AddSection({
 })
 
 M:AddToggle({
-    Name = "đánh quái gần",
+    Name = "Farm Nearest",
     Default = false,
-    Flag = "Tự động Farm Nearest",
+    Flag = "Auto Farm Nearest",
     Save = true,
     Callback = function(Value)
         _G.AutoFarmNearest = Value
@@ -3644,9 +3650,9 @@ M:AddToggle({
     })
 
 TweenChest = M:AddToggle({
-        Name = "Nhặt rương",
+        Name = "Auto Chest",
         Default = false,
-        Flag = "Tự động Chest",
+        Flag = "Auto Chest",
         Save = true,
         Callback = function(Value)
             AutoFarmChest = Value
@@ -3655,9 +3661,9 @@ TweenChest = M:AddToggle({
     })
 
     M:AddToggle({
-        Name = "Nhặt rương nhanh",
+        Name = "Fast Auto Chest (Có Tỉ Lệ Ăn Ban! )",
         Default = false,
-        Flag = "Tự động Chest[Bypass]",
+        Flag = "Auto Chest[Bypass]",
         Save = true,
         Callback = function(Value)
             _G.ChestBypass = Value
@@ -3665,7 +3671,7 @@ TweenChest = M:AddToggle({
     })
 
 M:AddToggle({
-    Name = "dừng khi có cup hoặc key",
+    Name = "Stop Only Dark Key or God's Chalice",
     Default = false,
     Flag = "Stop Only Dark Key or God's Chalice",
     Save = true,
@@ -3700,9 +3706,9 @@ spawn(function()
 end)
 
 ToggleBone = M:AddToggle({
-    Name = "Cày xương",
+    Name = "Farm Bone",
     Default = false,
-    Flag = "Tự động Farm Bone",
+    Flag = "Auto Farm Bone",
     Save = true,
     Callback = function(Value)
         _G.Auto_Bone = Value
@@ -3711,9 +3717,9 @@ ToggleBone = M:AddToggle({
 })
         
 ToggleRandom = M:AddToggle({
-        Name = "đổi xương",
+        Name = "Auto Trade Bone",
         Default = false,
-        Flag = "Tự động Random Bone",
+        Flag = "Auto Random Bone",
         Save = true,
         Callback = function(Value)
             _G.Auto_Random_Bone = Value
@@ -3744,9 +3750,9 @@ local EliteProgress = M:AddLabel("")
     end)
 
     M:AddToggle({
-        Name = "Đánh Boss Bí Ẩn",
+        Name = "Auto Farm Elite",
         Default = false,
-        Flag = "Tự động Elite",
+        Flag = "Auto Elite",
         Save = true,
         Callback = function(Value)
             _G.AutoElitehunter = Value
@@ -3756,9 +3762,9 @@ local EliteProgress = M:AddLabel("")
 
 
     M:AddToggle({
-        Name = "Đánh Nhà Máy",
+        Name = "Auto Factory",
         Default = false,
-        Flag = "Tự động Factory",
+        Flag = "Auto Factory",
         Save = true,
         Callback = function(Value)
             _G.AutoFactory = Value
@@ -3767,9 +3773,9 @@ local EliteProgress = M:AddLabel("")
     })
 
         M:AddToggle({
-            Name = "Đánh hải Tặc",
+            Name = "Auto Attack Raid Pirate",
             Default = false,
-            Flag = "Tự động Castle",
+            Flag = "Auto Castle",
             Save = true,
             Callback = function(Value)
                 _G.RaidPirate = Value
@@ -3782,9 +3788,9 @@ local EliteProgress = M:AddLabel("")
         
 
         M:AddToggle({
-            Name = "Cày Katakuri",
+            Name = "Farm Katakuri",
             Default = false,
-            Flag = "Tự động Katakuri",
+            Flag = "Auto Katakuri",
             Save = true,
             Callback = function(Value)
                 _G.AutoDoughtBoss = Value
@@ -3793,7 +3799,7 @@ local EliteProgress = M:AddLabel("")
         })    
         
         M:AddToggle({
-            Name = "triệu hồi katakuri",
+            Name = "Summon katakuri",
             Default = true,
             Callback = function(Value)
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner",Value)
@@ -3801,7 +3807,7 @@ local EliteProgress = M:AddLabel("")
         })
         
         M:AddToggle({
-            Name = "Cày Katakuri v2",
+            Name = "Farm Katakuri v2",
             Default = false,
             Flag = "Tự động Katakuri v2",
             Save = true,
@@ -3824,9 +3830,9 @@ local BoSs = M:AddLabel("")
 		while wait() do
 			pcall(function()
 				if game:GetService("ReplicatedStorage"):FindFirstChild(_G.SelectBoss) or game:GetService("Workspace").Enemies:FindFirstChild(_G.SelectBoss) then
-					BoSs:Set("Status Boss : Có")	
+					BoSs:Set("Status Boss : Có Boss Trong Server Nè ! ")	
 				else
-					BoSs:Set("Status Boss : Không Có")	
+					BoSs:Set("Status Boss : Đéo Có Boss Đâu Tìm Server Khác Đi Thằng Lờ ")	
 				end
 			end)
         end
@@ -3845,7 +3851,7 @@ end
 
 
 M:AddDropdown({
-    Name = "Chọn Boss",
+    Name = "Choose Boss",
     Default = "",
     Options = tableBoss,
     Flag = "Select Boss",
@@ -3858,7 +3864,7 @@ M:AddDropdown({
 
 
 M:AddToggle({
-    Name = "Đánh Boss",
+    Name = "Auto Farm Boss",
     Default = false,
     Flag = "Tự động Farm Boss",
     Save = true,
@@ -3902,7 +3908,7 @@ end)
 
 
 M:AddToggle({
-    Name = "Đánh hết Boss",
+    Name = "Farm All Boss",
     Default = false,
     Flag = "Tự động Farm All Boss",
     Save = true,
@@ -3947,7 +3953,7 @@ end)
     })
 
     M:AddToggle({
-        Name = "Cày Điểm Haki Quan Sát",
+        Name = "Auto Farm  Haki Observation Haki V2",
         Default = false,
         Flag = "Tự động Farm Observation Haki",
         Save = true,
@@ -3958,7 +3964,7 @@ end)
     })
     
     M:AddToggle({
-        Name = "Cày Điểm Haki Quan Sát Đổi Sv",
+        Name = "Auto Farm  Haki Observation Haki V2 Đổi Sv",
         Default = false,
         Flag = "Tự động Farm Observation Haki[HOP]",
         Save = true,
@@ -3972,9 +3978,9 @@ end)
     })
     
     M:AddToggle({
-        Name = "Tự động Death Step",
+        Name = "Auto Collect Death Step",
         Default = false,
-        Flag = "Tự động Death Step",
+        Flag = "Auto Death Step",
         Save = true,
         Callback = function(Value)
             _G.AutoDeathStep = Value
@@ -3982,9 +3988,9 @@ end)
     })
 
     M:AddToggle({
-        Name = "Tự động SharkMan Karate",
+        Name = "Auto Collect SharkMan Karate",
         Default = false,
-        Flag = "Tự động SharkMan",
+        Flag = "Auto SharkMan",
         Save = true,
         Callback = function(Value)
             _G.AutoSharkman = Value
@@ -3993,9 +3999,9 @@ end)
     })
 
  M:AddToggle({
-        Name = "Tự động Electric Claw",
+        Name = "Auto Collect Electric Claw",
         Default = false,
-        Flag = "Tự động Electric Claw",
+        Flag = "Auto Electric Claw",
         Save = true,
         Callback = function(Value)
             _G.AutoElectricClaw = Value
@@ -4004,9 +4010,9 @@ end)
     })
 
     M:AddToggle({
-        Name = "Tự động Dragon Talon",
+        Name = "Auto Collect Dragon Talon",
         Default = false,
-        Flag = "Tự động Dragon Talon",
+        Flag = "Auto Dragon Talon",
         Save = true,
         Callback = function(Value)
             _G.AutoDragonTalon = Value
@@ -4014,9 +4020,9 @@ end)
     })
 
     M:AddToggle({
-        Name = "Tự động GodHuman",
+        Name = "Auto Collect GodHuman",
         Default = false,
-        Flag = "Tự động GodHuman",
+        Flag = "Auto Collect GodHuman",
         Save = true,
         Callback = function(Value)
             _G.Auto_God_Human = Value
@@ -4024,7 +4030,7 @@ end)
     })
 
     ST:AddToggle({
-        Name = "Tự động Haki",
+        Name = "Auto Collect Haki",
         Default = true,
         Callback = function(Value)
             _G.AUTOHAKI = Value
@@ -4044,7 +4050,7 @@ end)
     end)
 
     ST:AddToggle({
-        Name = "Tránh văng",
+        Name = "Fix Crash",
         Default = true,
         Callback = function(Value)
             local vu = game:GetService("VirtualUser")
@@ -4059,7 +4065,7 @@ end)
     })
 
     ST:AddToggle({
-        Name = "Màn hình treo",
+        Name = "White Screen",
         Default = false,
         Flag = "White screen",
         Save = true,
@@ -4119,7 +4125,7 @@ spawn(function()
 end)
 
 IQ:AddToggle({
-    Name = "Tự động Saber",
+    Name = "Auto Attack Saber",
     Default = false,
     Flag = "Tự động Saber",
     Save = true,
@@ -4131,7 +4137,7 @@ IQ:AddToggle({
 
 
 IQ:AddToggle({
-    Name = "Tự động Saber[HOP]",
+    Name = "Auto Saber[HOP]",
     Default = false,
     Flag = "Tự động Saber[HOP]",
     Save = true,
@@ -4158,7 +4164,7 @@ spawn(function()
 end)
 
 TogglePolev1 = IQ:AddToggle({
-    Name = "Tự động Pole V.1",
+    Name = "Auto Pole V.1",
     Default = false,
     Flag = "Tự động Pole",
     Save = true,
@@ -4169,7 +4175,7 @@ TogglePolev1 = IQ:AddToggle({
 })
 
 TogglePolev1Hop = IQ:AddToggle({
-    Name = "Tự động Pole V.1[HOP]",
+    Name = "Auto Pole V.1[HOP]",
     Default = false,
     Flag = "Tự động Pole[HOP]",
     Save = true,
@@ -4183,7 +4189,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Second Sea",
+    Name = "Auto Second Sea",
     Default = false,
     Flag = "Tự động Second",
     Save = true,
@@ -4197,7 +4203,7 @@ local Section = IQ:AddSection({
     Name = "Vampire"
 })
 IQ:AddToggle({
-    Name = "Tự động Vampire",
+    Name = "Auto Vampire",
     Default = false,
     Flag = "Tự động Vampire",
     Save = true,
@@ -4213,7 +4219,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động SuperHuman",
+    Name = "Auto SuperHuman",
     Default = false,
     Flag = "Tự động SuperHuman",
     Save = true,
@@ -4229,7 +4235,7 @@ local Section = IQ:AddSection({
 
 
 BartiloToggle = IQ:AddToggle({
-    Name = "Tự động Bartilo Quest",
+    Name = "Auto Bartilo Quest",
     Default = false,
     Flag = "Tự động Bartilo",
     Save = true,
@@ -4246,7 +4252,7 @@ local Section = IQ:AddSection({
 
 
 IQ:AddToggle({
-    Name = "Tự động Third Sea",
+    Name = "Auto Third Sea",
     Default = false,
     Flag = "Tự động Third",
     Save = true,
@@ -4257,7 +4263,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Buy Legend Sword",
+    Name = "Auto Buy Legend Sword",
     Default = false,
     Flag = "Tự động Legend",
     Save = true,
@@ -4271,7 +4277,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Buddy Sword",
+    Name = "Auto Buddy Sword",
     Default = false,
     Flag = "Tự động Buddy",
     Save = true,
@@ -4282,7 +4288,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Buddy Sword[HOP]",
+    Name = "Auto Buddy Sword[HOP]",
     Default = false,
     Flag = "Tự động Buddy[HOP]",
     Save = true,
@@ -4296,7 +4302,7 @@ IQ:AddToggle({
     })
 
     IQ:AddToggle({
-        Name = "Tự động Soul Guita",
+        Name = "Auto Soul Guita",
         Default = false,
         Flag = "Tự động Soul",
         Save = true,
@@ -4307,7 +4313,7 @@ IQ:AddToggle({
     })
 
 IQ:AddToggle({
-    Name = "Tự động Soul Guita[HOP]",
+    Name = "Auto Soul Guita[HOP]",
     Default = false,
     Flag = "Tự động Soul[HOP]",
     Save = true,
@@ -4317,7 +4323,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Auto Observation V2",
+    Name = "Auto Auto Observation V2",
     Default = false,
     Flag = "Tự động ObservationV2",
     Save = true,
@@ -4328,13 +4334,13 @@ IQ:AddToggle({
 })
 
 local Section = IQ:AddSection({
-    Name = "Tự động Dual Curset Katana[Not Work]"
+    Name = "Auto Dual Curset Katana[Not Work]"
 })
 
 IQ:AddToggle({
-    Name = "Tự động Dual Curset Katana",
+    Name = "Auto Cursed Dual Katana",
     Default = false,
-    Flag = "Tự động DualCursetKatana",
+    Flag = "Auto DualCursetKatana",
     Save = true,
     Callback = function(Value)
         Auto_Cursed_Dual_Katana = Value
@@ -4347,9 +4353,9 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Tushita",
+    Name = "Auto Tushita",
     Default = false,
-    Flag = "Tự động Tushita",
+    Flag = "Auto Tushita",
     Save = true,
     Callback = function(Value)
         _G.Autotushita = Value
@@ -4359,9 +4365,9 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Tushita[HOP]",
+    Name = "Auto Tushita[HOP]",
     Default = false,
-    Flag = "Tự động Tushita[HOP]",
+    Flag = "Auto Tushita[HOP]",
     Save = true,
     Callback = function(Value)
         _G.Hop = Value
@@ -4373,7 +4379,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Cavander",
+    Name = "Auto Cavander",
     Default = false,
     Flag = "Tự động Cavander",
     Save = true,
@@ -4384,7 +4390,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Cavander[HOP]",
+    Name = "Auto Cavander[HOP]",
     Default = false,
     Flag = "Tự động Cavander[HOP]",
     Save = true,
@@ -4398,7 +4404,7 @@ IQ:AddToggle({
         })
 
         IQ:AddToggle({
-            Name = "Tự động Twin Hook",
+            Name = "Auto Twin Hook",
             Default = false,
             Flag = "Tự động Twin",
             Save = true,
@@ -4417,7 +4423,7 @@ IQ:AddToggle({
         })
 
         IQ:AddToggle({
-            Name = "Tự động Hallow Scythe",
+            Name = "Auto Hallow Scythe",
             Default = false,
             Flag = "Tự động Hallow",
             Save = true,
@@ -4434,7 +4440,7 @@ IQ:AddToggle({
         })
 
         IQ:AddToggle({
-            Name = "Tự động Dark Dragger",
+            Name = "Auto Dark Dragger",
             Default = false,
             Flag = "Tự động Dark",
             Save = true,
@@ -4474,7 +4480,7 @@ IQ:AddToggle({
     })
 
     IQ:AddToggle({
-        Name = "Tự động Seabeast",
+        Name = "Auto Seabeast",
         Default = false,
         Flag = "Tự động Seabeast",
         Save = true,
@@ -4502,7 +4508,7 @@ local Section = IQ:AddSection({
     })
 
 IQ:AddToggle({
-    Name = "Tự động treo đảo bí ẩn",
+    Name = "Auto treo Mirrage",
     Default = false,
     Flag = "Tự động Mirrage",
     Save = true,
@@ -4576,7 +4582,7 @@ IQ:AddToggle({
 }) 
     
 IQ:AddToggle({
-    Name = "Tìm đảo bí ẩn",
+    Name = "Auto Find Mirrage island",
     Default = false,
     Flag = "Tự động Mirrage2",
     Save = true,
@@ -4676,7 +4682,7 @@ local Fruit = S:AddLabel("Fruit : ")
     end)
 
 S:AddToggle({
-    Name = "Tự động Nâng",
+    Name = "Auto Nâng",
     Default = false,
     Flag = "Tự động Kaitun",
     Save = true,
@@ -4737,9 +4743,9 @@ S:AddToggle({
 
 PointStats = 1
 S:AddSlider({
-    Name = "Điểm",
+    Name = "Point",
     Min = 1,
-    Max = 2450,
+    Max = 2550,
     Default = 1,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
@@ -4756,7 +4762,7 @@ local Section = E:AddSection({
 })
 
 E:AddToggle({
-    Name = "ESP Ng Chơi",
+    Name = "ESP Player",
     Default = false,
     Flag = "ESP Players",
     Save = true,
@@ -4812,7 +4818,7 @@ function UpdatePlayerChams()
 end
 
 E:AddToggle({
-    Name = "ESP Trái Ác Quỷ",
+    Name = "ESP Devil Fruits",
     Default = false,
     Flag = "ESP Fruits",
     Save = true,
@@ -4879,7 +4885,7 @@ spawn(function()
 end)
 
 E:AddToggle({
-    Name = "ESP Đảo",
+    Name = "ESP Island",
     Default = false,
     Flag = "ESP Island",
     Save = true,
@@ -4992,7 +4998,7 @@ _G.SelectChip = selectraids or ""
 
 
     RA:AddDropdown({
-        Name = "Chọn Chips",
+        Name = "Choose Chips",
         Default = "",
         Options = Raidslist,
         Flag = "Select Chips",
@@ -5005,21 +5011,21 @@ _G.SelectChip = selectraids or ""
 
 
 RA:AddButton({
-    Name = "Mua Chip",
+    Name = "Buy Chip",
     Callback = function()
           _G.AutoBuyChip = value
       end    
 })
 
 RA:AddButton({
-    Name = "Mua Chips",
+    Name = "Buy Chips",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select",_G.SelectChip)
       end    
 })
 
 RA:AddToggle({
-    Name = "Tự động Vào Raid",
+    Name = "Auto Vào Raid",
     Default = false,
     Flag = "Tự động Start",
     Save = true,
@@ -5055,7 +5061,7 @@ RA:AddToggle({
     })
 
 RA:AddToggle({
-    Name = "Tự động skill v2",
+    Name = "Auto skill v2",
     Default = false,
     Flag = "Tự động Awakener",
     Save = true,
@@ -5069,7 +5075,7 @@ local Section = RA:AddSection({
 })
 
 RA:AddToggle({
-    Name = "Tự động Mua Chips Law[Raid]",
+    Name = "Auto Buy Chips Law[Raid]",
     Default = false,
     Flag = "Tự động Chips Law",
     Save = true,
@@ -5079,7 +5085,7 @@ RA:AddToggle({
 })
 
 RA:AddToggle({
-    Name = "Vào raid law",
+    Name = "Auto raid law",
     Default = false,
     Flag = "Tự động Start Raid Law",
     Save = true,
@@ -5089,7 +5095,7 @@ RA:AddToggle({
 })
 
 RA:AddToggle({
-    Name = "Tự động Kill Law",
+    Name = "Auto Kill Law",
     Default = false,
     Flag = "Tự động Kill Law",
     Save = true,
@@ -5189,7 +5195,7 @@ LC:AddDropdown({
 end
 
 LC:AddToggle({
-    Name = "Tele đến đảo",
+    Name = "Teleport to Island",
     Default = false,
     Callback = function(Value)
         _G.TeleportIsland = Value
@@ -5355,7 +5361,7 @@ NPC3 = {
 
 if World1 then
 LC:AddDropdown({
-	Name = "Chọn NPC",
+	Name = "Choose NPC",
 	Default = "",
 	Options = NPC1,
     Flag = "Select NPC",
@@ -5379,7 +5385,7 @@ if World2 then
 end
     if World3 then
         LC:AddDropdown({
-            Name = "Chọn NPC",
+            Name = "Choose NPC",
             Default = "",
             Options = NPC3,
             Flag = "Select NPC",
@@ -5391,7 +5397,7 @@ end
     end
 
         LC:AddToggle({
-            Name = "Tele Đến NPC",
+            Name = "Teleport to NPC",
             Default = false,
             Callback = function(Value)
                 _G.TeleportNPC = Value
@@ -5489,7 +5495,7 @@ local Section = LC:AddSection({
 })
 
 LC:AddButton({
-    Name = "Xóa xương mù",
+    Name = "Xóa Xương Mù",
     Callback = function()
         game:GetService("Lighting").LightingLayers:Destroy()
         game:GetService("Lighting").Sky:Destroy()
@@ -5497,7 +5503,7 @@ LC:AddButton({
 })
 
 LC:AddToggle({
-    Name = "Tele đến đảo bí ẩn",
+    Name = "Teleport to Mirage",
     Default = false,
     Flag = "Teleport to Mirage",
     Save = true,
@@ -5534,7 +5540,7 @@ Playerslist = {}
     end
     
 local SelectedPly = LC:AddDropdown({
-    Name = "Chọn ngchơi",
+    Name = "Choose Player",
     Default = "",
     Options = Playerslist,
     Callback = function(Value)
@@ -5543,7 +5549,7 @@ local SelectedPly = LC:AddDropdown({
 })
 
 LC:AddButton({
-    Name = "Làm mới",
+    Name = "Refresh",
     Callback = function()
         NewPlayerList = {}
     for i,v in pairs(game.Players:GetChildren()) do  
@@ -5554,7 +5560,7 @@ LC:AddButton({
 })
 
 LC:AddToggle({
-    Name = "Tele đến người chơi",
+    Name = "Teleport Player",
     Default = false,
     Callback = function(Value)
         _G.TeleportPly = Value
@@ -5569,7 +5575,7 @@ LC:AddToggle({
 
 
 LC:AddToggle({
-    Name = "Tự động kill người chơi",
+    Name = "Aimbot Player",
     Default = false,
     Callback = function(Value)
         _G.Auto_Kill_Ply = Value
@@ -5582,7 +5588,7 @@ local Section = LC:AddSection({
 })
 
 LC:AddToggle({
-    Name = "Ngắm chiêu",
+    Name = "AimBot",
     Default = false,
     Callback = function(Value)
         _G.Aimbot_Gun = Value
@@ -5594,7 +5600,7 @@ LC:AddToggle({
 
 
 LC:AddToggle({
-    Name = "Ngắm chiêu người chơi gần",
+    Name = "Aimbot Skill ",
     Default = false,
     Flag = "Aimbot Skill Nearest",
     Save = true,
@@ -5725,7 +5731,7 @@ local Section = SV:AddSection({
 })
 
 SV:AddToggle({
-	Name = "Tìm trăng tròn",
+	Name = "Find Full Moon",
 	Default = false,
     Flag = "FindFM",
     Save = true,
@@ -5847,7 +5853,7 @@ D:AddButton({
 })
 
 D:AddToggle({
-    Name = "Tự động Đổi Fruits",
+    Name = "Auto Random Fruits",
     Default = false,
     Flag = "Tự động Random Fruits",
     Save = true,
@@ -5905,7 +5911,7 @@ FruitList = {
 }
 
 D:AddToggle({
-    Name = "Tự động Cất Fruits",
+    Name = "Auto Store Fruits",
     Default = false,
     Flag = "Tự động Store Fruits",
     Save = true,
@@ -5944,7 +5950,7 @@ function DropFruit()
     end)
 end
 D:AddToggle({
-    Name = "Tele đến Fruit",
+    Name = "Teleport To Fruit Spawn",
     Default = false,
     Flag = "Teleport To Fruit Spawn",
     Save = true,
@@ -5966,7 +5972,7 @@ spawn(function()
 end)
 
 D:AddToggle({
-    Name = "Tự động thả Fruit",
+    Name = "Auto Drop Fruit",
     Default = false,
     Flag = "Tự động Drop Fruit",
     Save = true,
@@ -6006,7 +6012,7 @@ spawn(function()
 end)
 
 D:AddToggle({
-    Name = "Nhặt hết fruit (dễ kick)",
+    Name = "Collect All Fruit (dễ kick)",
     Default = false,
     Flag = "Bring All Fruit[75% Kick]",
     Save = true,
@@ -6033,9 +6039,9 @@ local Section = R:AddSection({
 })
 
 AutoPullLever = R:AddToggle({
-    Name = "Tự động gạt cần",
+    Name = "Auto Pull Lever ( Gạt Cần)",
     Default = false,
-    Flag = "Tự động Pull Lever",
+    Flag = "Auto Pull Lever",
     Save = true,
     Callback = function(Value)
         _G.AutoPullLever = Value
@@ -6044,7 +6050,7 @@ AutoPullLever = R:AddToggle({
 })
 
 R:AddToggle({
-    Name = "Tự động tộc v3",
+    Name = "Auto UpgradeRace v3",
     Default = false,
     Flag = "Tự động Turn On Race v3",
     Save = true,
@@ -6064,9 +6070,9 @@ spawn(function()
     end
 end)
 R:AddToggle({
-    Name = "Tự động tộc v4",
+    Name = "Auto UpgradeRace v4",
     Default = false,
-    Flag = "Tự động Turn On Race v4",
+    Flag = "Auto Turn On Race v4",
     Save = true,
     Callback = function(Value)
         _G.V4 = Value
@@ -6085,7 +6091,7 @@ spawn(function()
 end)
 
 MoveCamTooMoonToggle = R:AddToggle({
-    Name = "Nhìn trăng",
+    Name = "Lock Moon",
     Default = false,
     Flag = "Move Cam to Moon",
     Save = true,
@@ -6106,7 +6112,7 @@ spawn(function()
 end)
 
 R:AddButton({
-    Name = "Tele đến Gear",
+    Name = "Teleport Gear",
     Callback = function()
         _G.TweenMGear = Value
         StopTween(_G.TweenMGear)	
@@ -6118,9 +6124,9 @@ local Section = R:AddSection({
 })
 
 R:AddToggle({
-    Name = "Tự động Mua Gear",
+    Name = "Auto Buy Gear",
     Default = false,
-    Flag = "Tự động Buy Gear",
+    Flag = "Auto Buy Gear",
     Save = true,
     Callback = function(Value)
         _G.Auto_Farm_Bone4 = Value
@@ -6147,9 +6153,9 @@ end)
 end)
 
 R:AddToggle({
-    Name = "Tự động cày tộc mua gear",
+    Name = "Auto Train & Buy Gear",
     Default = false,
-    Flag = "Tự động Train Race",
+    Flag = "Auto Train Race",
     Save = true,
     Callback = function(Value)
     _G.AutoRace = Value
@@ -6165,21 +6171,21 @@ local Section = R:AddSection({
 
 
 R:AddButton({
-    Name = "Tele Đến Đền",
+    Name = "Teleport Up V4",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
       end    
 })
 
 R:AddButton({
-    Name = "Tele đến cần gạt",
+    Name = "Teleport Cần Gạt",
     Callback = function()
         PullLever()
       end    
 })
 
 R:AddButton({
-    Name = "Tele Đến Ancient One",
+    Name = "Teleport Ancient One",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
@@ -6189,7 +6195,7 @@ R:AddButton({
 })
 
 R:AddButton({
-    Name = "Tele đến Clock",
+    Name = "Teleport Clock",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
@@ -6199,7 +6205,7 @@ R:AddButton({
 })
 
 R:AddButton({
-    Name = "Tele đến tộc của bạn",
+    Name = "Teleprot Trails Portal",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
   wait(.1)
@@ -6243,9 +6249,9 @@ local Section = R:AddSection({
 })
 
 R:AddToggle({
-    Name = "Tự động hoàn thành ải",
+    Name = "Auto Complete Trail",
     Default = false,
-    Flag = "Tự động Complete Trials",
+    Flag = "Auto Complete Trials",
     Save = true,
     Callback = function(Value)
         _G.AutoQuestRace = Value
@@ -6254,7 +6260,7 @@ R:AddToggle({
 })
 
 R:AddToggle({
-    Name = "Tự động kill người chơi",
+    Name = "Auto kill plyer",
     Default = false,
     Flag = "KillTrials",
     Save = true,
@@ -6691,7 +6697,7 @@ spawn(function()
     })
 
 C:AddToggle({
-    Name = "Tự động vào lại",
+    Name = "Auto Rejoin",
     Default = false,
     Callback = function(Value)
         _G.AutoRejoin = Value
